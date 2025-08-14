@@ -53,11 +53,43 @@
 
 
 
-const person = {
-    firstName: 'Maxxx',
-    age: 30
-};
+// const person = {
+//     firstName: 'Maxxx',
+//     age: 30
+// };
 
-const { firstName: userName, age } = person;
+// const { firstName: userName, age } = person;
 
-console.log(userName, age, person);
+// console.log(userName, age, person);
+
+
+
+// creating class
+
+//normally like this
+// class User {
+//     name: string;
+//     age: number;
+    
+//     constructor(name: string, age: number) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     greet() {
+//         console.log('hello my name is ' + this.name);
+//     }
+// }
+
+// but we can also use the shorthands
+
+class User {
+    constructor(public name: string, public age: number) {}
+
+    greet() {
+        console.log('hello my name is ' + this.name);
+    }
+}
+
+const user = new User('Max', 30);
+user.greet();
